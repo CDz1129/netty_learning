@@ -21,7 +21,7 @@ public class MyServer {
         try {
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(boss,work).channel(NioServerSocketChannel.class)
-                    .childHandler(new MyChatServerInit());
+                    .childHandler(new WebSocketChannelInit());
             ChannelFuture channelFuture = bootstrap.bind(8899).sync();
             channelFuture.channel().closeFuture().sync();
         }finally {
