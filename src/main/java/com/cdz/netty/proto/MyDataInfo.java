@@ -3,8 +3,8 @@
 
 package com.cdz.netty.proto;
 
-public final class DataInfo {
-  private DataInfo() {}
+public final class MyDataInfo {
+  private MyDataInfo() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -14,8 +14,8 @@ public final class DataInfo {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface StudentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.cdz.netty.proto.Student)
+  public interface PersonOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.cdz.netty.proto.Person)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -56,18 +56,18 @@ public final class DataInfo {
         getAddressBytes();
   }
   /**
-   * Protobuf type {@code com.cdz.netty.proto.Student}
+   * Protobuf type {@code com.cdz.netty.proto.Person}
    */
-  public  static final class Student extends
+  public  static final class Person extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.cdz.netty.proto.Student)
-      StudentOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.cdz.netty.proto.Person)
+      PersonOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Student.newBuilder() to construct.
-    private Student(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Person.newBuilder() to construct.
+    private Person(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Student() {
+    private Person() {
       name_ = "";
       address_ = "";
     }
@@ -77,7 +77,7 @@ public final class DataInfo {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Student(
+    private Person(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -134,15 +134,15 @@ public final class DataInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.cdz.netty.proto.DataInfo.internal_static_com_cdz_netty_proto_Student_descriptor;
+      return com.cdz.netty.proto.MyDataInfo.internal_static_com_cdz_netty_proto_Person_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.cdz.netty.proto.DataInfo.internal_static_com_cdz_netty_proto_Student_fieldAccessorTable
+      return com.cdz.netty.proto.MyDataInfo.internal_static_com_cdz_netty_proto_Person_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.cdz.netty.proto.DataInfo.Student.class, com.cdz.netty.proto.DataInfo.Student.Builder.class);
+              com.cdz.netty.proto.MyDataInfo.Person.class, com.cdz.netty.proto.MyDataInfo.Person.Builder.class);
     }
 
     private int bitField0_;
@@ -301,10 +301,10 @@ public final class DataInfo {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.cdz.netty.proto.DataInfo.Student)) {
+      if (!(obj instanceof com.cdz.netty.proto.MyDataInfo.Person)) {
         return super.equals(obj);
       }
-      com.cdz.netty.proto.DataInfo.Student other = (com.cdz.netty.proto.DataInfo.Student) obj;
+      com.cdz.netty.proto.MyDataInfo.Person other = (com.cdz.netty.proto.MyDataInfo.Person) obj;
 
       if (hasName() != other.hasName()) return false;
       if (hasName()) {
@@ -349,69 +349,69 @@ public final class DataInfo {
       return hash;
     }
 
-    public static com.cdz.netty.proto.DataInfo.Student parseFrom(
+    public static com.cdz.netty.proto.MyDataInfo.Person parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseFrom(
+    public static com.cdz.netty.proto.MyDataInfo.Person parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseFrom(
+    public static com.cdz.netty.proto.MyDataInfo.Person parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseFrom(
+    public static com.cdz.netty.proto.MyDataInfo.Person parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseFrom(byte[] data)
+    public static com.cdz.netty.proto.MyDataInfo.Person parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseFrom(
+    public static com.cdz.netty.proto.MyDataInfo.Person parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseFrom(java.io.InputStream input)
+    public static com.cdz.netty.proto.MyDataInfo.Person parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseFrom(
+    public static com.cdz.netty.proto.MyDataInfo.Person parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseDelimitedFrom(java.io.InputStream input)
+    public static com.cdz.netty.proto.MyDataInfo.Person parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseDelimitedFrom(
+    public static com.cdz.netty.proto.MyDataInfo.Person parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseFrom(
+    public static com.cdz.netty.proto.MyDataInfo.Person parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.cdz.netty.proto.DataInfo.Student parseFrom(
+    public static com.cdz.netty.proto.MyDataInfo.Person parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -424,7 +424,7 @@ public final class DataInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.cdz.netty.proto.DataInfo.Student prototype) {
+    public static Builder newBuilder(com.cdz.netty.proto.MyDataInfo.Person prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -440,26 +440,26 @@ public final class DataInfo {
       return builder;
     }
     /**
-     * Protobuf type {@code com.cdz.netty.proto.Student}
+     * Protobuf type {@code com.cdz.netty.proto.Person}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.cdz.netty.proto.Student)
-        com.cdz.netty.proto.DataInfo.StudentOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.cdz.netty.proto.Person)
+        com.cdz.netty.proto.MyDataInfo.PersonOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.cdz.netty.proto.DataInfo.internal_static_com_cdz_netty_proto_Student_descriptor;
+        return com.cdz.netty.proto.MyDataInfo.internal_static_com_cdz_netty_proto_Person_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.cdz.netty.proto.DataInfo.internal_static_com_cdz_netty_proto_Student_fieldAccessorTable
+        return com.cdz.netty.proto.MyDataInfo.internal_static_com_cdz_netty_proto_Person_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.cdz.netty.proto.DataInfo.Student.class, com.cdz.netty.proto.DataInfo.Student.Builder.class);
+                com.cdz.netty.proto.MyDataInfo.Person.class, com.cdz.netty.proto.MyDataInfo.Person.Builder.class);
       }
 
-      // Construct using com.cdz.netty.proto.DataInfo.Student.newBuilder()
+      // Construct using com.cdz.netty.proto.MyDataInfo.Person.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -489,17 +489,17 @@ public final class DataInfo {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.cdz.netty.proto.DataInfo.internal_static_com_cdz_netty_proto_Student_descriptor;
+        return com.cdz.netty.proto.MyDataInfo.internal_static_com_cdz_netty_proto_Person_descriptor;
       }
 
       @java.lang.Override
-      public com.cdz.netty.proto.DataInfo.Student getDefaultInstanceForType() {
-        return com.cdz.netty.proto.DataInfo.Student.getDefaultInstance();
+      public com.cdz.netty.proto.MyDataInfo.Person getDefaultInstanceForType() {
+        return com.cdz.netty.proto.MyDataInfo.Person.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.cdz.netty.proto.DataInfo.Student build() {
-        com.cdz.netty.proto.DataInfo.Student result = buildPartial();
+      public com.cdz.netty.proto.MyDataInfo.Person build() {
+        com.cdz.netty.proto.MyDataInfo.Person result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -507,8 +507,8 @@ public final class DataInfo {
       }
 
       @java.lang.Override
-      public com.cdz.netty.proto.DataInfo.Student buildPartial() {
-        com.cdz.netty.proto.DataInfo.Student result = new com.cdz.netty.proto.DataInfo.Student(this);
+      public com.cdz.netty.proto.MyDataInfo.Person buildPartial() {
+        com.cdz.netty.proto.MyDataInfo.Person result = new com.cdz.netty.proto.MyDataInfo.Person(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -562,16 +562,16 @@ public final class DataInfo {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.cdz.netty.proto.DataInfo.Student) {
-          return mergeFrom((com.cdz.netty.proto.DataInfo.Student)other);
+        if (other instanceof com.cdz.netty.proto.MyDataInfo.Person) {
+          return mergeFrom((com.cdz.netty.proto.MyDataInfo.Person)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.cdz.netty.proto.DataInfo.Student other) {
-        if (other == com.cdz.netty.proto.DataInfo.Student.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.cdz.netty.proto.MyDataInfo.Person other) {
+        if (other == com.cdz.netty.proto.MyDataInfo.Person.getDefaultInstance()) return this;
         if (other.hasName()) {
           bitField0_ |= 0x00000001;
           name_ = other.name_;
@@ -603,11 +603,11 @@ public final class DataInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.cdz.netty.proto.DataInfo.Student parsedMessage = null;
+        com.cdz.netty.proto.MyDataInfo.Person parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.cdz.netty.proto.DataInfo.Student) e.getUnfinishedMessage();
+          parsedMessage = (com.cdz.netty.proto.MyDataInfo.Person) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -814,51 +814,51 @@ public final class DataInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.cdz.netty.proto.Student)
+      // @@protoc_insertion_point(builder_scope:com.cdz.netty.proto.Person)
     }
 
-    // @@protoc_insertion_point(class_scope:com.cdz.netty.proto.Student)
-    private static final com.cdz.netty.proto.DataInfo.Student DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.cdz.netty.proto.Person)
+    private static final com.cdz.netty.proto.MyDataInfo.Person DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.cdz.netty.proto.DataInfo.Student();
+      DEFAULT_INSTANCE = new com.cdz.netty.proto.MyDataInfo.Person();
     }
 
-    public static com.cdz.netty.proto.DataInfo.Student getDefaultInstance() {
+    public static com.cdz.netty.proto.MyDataInfo.Person getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<Student>
-        PARSER = new com.google.protobuf.AbstractParser<Student>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Person>
+        PARSER = new com.google.protobuf.AbstractParser<Person>() {
       @java.lang.Override
-      public Student parsePartialFrom(
+      public Person parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Student(input, extensionRegistry);
+        return new Person(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Student> parser() {
+    public static com.google.protobuf.Parser<Person> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Student> getParserForType() {
+    public com.google.protobuf.Parser<Person> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.cdz.netty.proto.DataInfo.Student getDefaultInstanceForType() {
+    public com.cdz.netty.proto.MyDataInfo.Person getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_cdz_netty_proto_Student_descriptor;
+    internal_static_com_cdz_netty_proto_Person_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_cdz_netty_proto_Student_fieldAccessorTable;
+      internal_static_com_cdz_netty_proto_Person_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -868,10 +868,10 @@ public final class DataInfo {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n)src/main/resources/protobuf/Student.pr" +
-      "oto\022\023com.cdz.netty.proto\"5\n\007Student\022\014\n\004n" +
-      "ame\030\001 \002(\t\022\013\n\003age\030\002 \001(\005\022\017\n\007address\030\003 \001(\tB" +
-      "\037\n\023com.cdz.netty.protoB\010DataInfo"
+      "\n(src/main/resources/protobuf/Person.pro" +
+      "to\022\023com.cdz.netty.proto\"4\n\006Person\022\014\n\004nam" +
+      "e\030\001 \002(\t\022\013\n\003age\030\002 \001(\005\022\017\n\007address\030\003 \001(\tB!\n" +
+      "\023com.cdz.netty.protoB\nMyDataInfo"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -885,11 +885,11 @@ public final class DataInfo {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_cdz_netty_proto_Student_descriptor =
+    internal_static_com_cdz_netty_proto_Person_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_cdz_netty_proto_Student_fieldAccessorTable = new
+    internal_static_com_cdz_netty_proto_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_cdz_netty_proto_Student_descriptor,
+        internal_static_com_cdz_netty_proto_Person_descriptor,
         new java.lang.String[] { "Name", "Age", "Address", });
   }
 

@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+package com.cdz.netty.proto;
+
+option java_package = "com.cdz.netty.proto";
+option java_outer_classname = "TestDataInfo";
+
+message BaseData{
+
+  message Persion{
+    required string name =1;
+    optional int32 age = 2;
+    optional string address = 3;
+  }
+
+  message Student{
+    required string name = 1;
+    optional int32 age = 2;
+    optional string school =3;
+  }
+}

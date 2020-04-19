@@ -36,4 +36,8 @@ class DataInfoTest {
         assertEquals(student,student1);
 
     }
+
+    @Test
+    void testDataInfo() {
+    }
 }
