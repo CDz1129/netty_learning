@@ -18,7 +18,8 @@ dependencies {
             'junit:junit:4.13',
             'org.junit.jupiter:junit-jupiter-engine:5.5.2',
             'com.google.protobuf:protobuf-java:3.7.1',
-            'com.google.protobuf:protobuf-java-util:3.7.1'
+            'com.google.protobuf:protobuf-java-util:3.7.1',
+            'redis.clients:jedis:3.1.0'
 
     )
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
