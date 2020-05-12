@@ -1,4 +1,4 @@
-package com.cdz.netty.proto;
+package com.cdz.netty.protobuf;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import org.junit.jupiter.api.Test;

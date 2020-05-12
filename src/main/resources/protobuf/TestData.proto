@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package com.cdz.netty.proto;
 
-option java_package = "com.cdz.netty.proto";
+option java_package = "com.cdz.proto";
 option java_outer_classname = "TestDataInfo";
 
 message BaseData{

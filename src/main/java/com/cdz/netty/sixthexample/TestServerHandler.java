@@ -1,10 +1,7 @@
 package com.cdz.netty.sixthexample;
 
-import com.cdz.netty.proto.TestDataInfo;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-
-import java.util.UUID;
 
 /**
  * Created with IntelliJ IDEA.

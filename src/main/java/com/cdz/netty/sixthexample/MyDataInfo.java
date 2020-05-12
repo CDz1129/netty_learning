@@ -15,7 +15,7 @@ public final class MyDataInfo {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface PersonOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.cdz.netty.proto.Person)
+      // @@protoc_insertion_point(interface_extends:com.cdz.proto.Person)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -56,11 +56,11 @@ public final class MyDataInfo {
         getAddressBytes();
   }
   /**
-   * Protobuf type {@code com.cdz.netty.proto.Person}
+   * Protobuf type {@code com.cdz.proto.Person}
    */
   public  static final class Person extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.cdz.netty.proto.Person)
+      // @@protoc_insertion_point(message_implements:com.cdz.proto.Person)
       PersonOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Person.newBuilder() to construct.
@@ -440,11 +440,11 @@ public final class MyDataInfo {
       return builder;
     }
     /**
-     * Protobuf type {@code com.cdz.netty.proto.Person}
+     * Protobuf type {@code com.cdz.proto.Person}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.cdz.netty.proto.Person)
+        // @@protoc_insertion_point(builder_implements:com.cdz.proto.Person)
         MyDataInfo.PersonOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
@@ -459,7 +459,7 @@ public final class MyDataInfo {
                 MyDataInfo.Person.class, MyDataInfo.Person.Builder.class);
       }
 
-      // Construct using com.cdz.netty.proto.MyDataInfo.Person.newBuilder()
+      // Construct using com.cdz.proto.MyDataInfo.Person.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -814,10 +814,10 @@ public final class MyDataInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.cdz.netty.proto.Person)
+      // @@protoc_insertion_point(builder_scope:com.cdz.proto.Person)
     }
 
-    // @@protoc_insertion_point(class_scope:com.cdz.netty.proto.Person)
+    // @@protoc_insertion_point(class_scope:com.cdz.proto.Person)
     private static final MyDataInfo.Person DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new MyDataInfo.Person();
