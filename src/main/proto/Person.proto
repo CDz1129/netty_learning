@@ -9,6 +9,12 @@ option java_multiple_files = true;
 service StudentService{
 
   rpc  GetRealName(MyRequest) returns (MyResponse) {};
+
+  rpc  GetStudentListByAge(StudentRequest) returns (stream StudentResponse) {};
+
+  rpc  GetStudentByAgeList(stream StudentRequest) returns (StudentResponse) {};
+
+  rpc  GetStudentListByAgeList(stream StudentRequest) returns (stream StudentResponse) {};
 }
 
 message MyRequest {
@@ -17,4 +23,22 @@ message MyRequest {
 
 message MyResponse{
   string realname=2;
+}
+
+message StudentRequest{
+  int32 age =1;
+}
+
+message StudentResponse{
+  string name =1;
+  string address = 2;
+  int32 age =3;
+}
+
+message StudentRequestList{
+  repeated StudentRequest ageList = 1;
+}
+
+message StudentResponseList{
+  repeated StudentResponse studentList = 1;
 }

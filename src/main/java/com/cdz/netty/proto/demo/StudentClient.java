@@ -1,10 +1,13 @@
 package com.cdz.netty.proto.demo;
 
-import com.cdz.netty.proto.MyRequest;
-import com.cdz.netty.proto.MyResponse;
-import com.cdz.netty.proto.StudentServiceGrpc;
+import com.cdz.netty.proto.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import io.grpc.stub.StreamObserver;
+
+import java.util.Iterator;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,12 +24,73 @@ public class StudentClient {
         ManagedChannel channel = ManagedChannelBuilder.forTarget("localhost:50051")
                 .usePlaintext()
                 .build();
-        MyRequest myRequest = MyRequest.newBuilder().setUsername("cdz").build();
 
 
         final StudentServiceGrpc.StudentServiceBlockingStub blockingStub = StudentServiceGrpc.newBlockingStub(channel);
 
+        MyRequest myRequest = MyRequest.newBuilder().setUsername("cdz").build();
         MyResponse realName = blockingStub.getRealName(myRequest);
+
+        System.out.println("-----------------simple --------------------");
         System.out.println("gRPC返回："+realName.getRealname());
+        System.out.println("-----------------simple --------------------");
+//
+        System.out.println("--------response stream-----------------");
+        StudentRequest studentRequest = StudentRequest.newBuilder().setAge(20).build();
+        Iterator<StudentResponse> studentListByAge = blockingStub.getStudentListByAge(studentRequest);
+
+        while (studentListByAge.hasNext()){
+            System.out.println("---------------");
+            StudentResponse studentResponse = studentListByAge.next();
+
+            System.out.println(studentResponse.getName());
+            System.out.println(studentResponse.getAddress());
+            System.out.println(studentResponse.getAge());
+            System.out.println("---------------");
+        }
+        System.out.println("--------response stream-----------------");
+
+        System.out.println("---------request stream-----------------------");
+
+        final StudentServiceGrpc.StudentServiceStub asynStub = StudentServiceGrpc.newStub(channel);
+
+        StreamObserver<StudentRequest> requestStreamObserver = asynStub.getStudentByAgeList(new StreamObserver<StudentResponse>() {
+            @Override
+            public void onNext(StudentResponse studentResponse) {
+                System.out.println("---------------");
+                System.out.println(studentResponse.getName());
+                System.out.println(studentResponse.getAddress());
+                System.out.println(studentResponse.getAge());
+                System.out.println("---------------");
+
+            }
+
+            @Override
+            public void onError(Throwable t) {
+
+            }
+
+            @Override
+            public void onCompleted() {
+
+                System.out.println("发送完毕");
+            }
+        });
+
+        requestStreamObserver.onNext(StudentRequest.newBuilder().setAge(10).build());
+        requestStreamObserver.onNext(StudentRequest.newBuilder().setAge(20).build());
+        requestStreamObserver.onNext(StudentRequest.newBuilder().setAge(30).build());
+        requestStreamObserver.onNext(StudentRequest.newBuilder().setAge(40).build());
+        requestStreamObserver.onCompleted();
+        System.out.println("---------request stream-----------------------");
+
+        System.out.println("---------request and response stream-----------------------");
+
+
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

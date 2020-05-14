@@ -9,7 +9,7 @@ package com.cdz.netty.proto;
 public  final class MyResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:com.cdz.proto.MyResponse)
-        MyResponseOrBuilder {
+    MyResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use MyResponse.newBuilder() to construct.
   private MyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -98,7 +98,7 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof String) {
       return (String) ref;
     } else {
-      com.google.protobuf.ByteString bs =
+      com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       String s = bs.toStringUtf8();
       realname_ = s;
@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
       getRealnameBytes() {
     Object ref = realname_;
     if (ref instanceof String) {
-      com.google.protobuf.ByteString b =
+      com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (String) ref);
       realname_ = b;
@@ -283,7 +283,7 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.cdz.proto.MyResponse)
-          MyResponseOrBuilder {
+      MyResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return StudentProto.internal_static_com_cdz_proto_MyResponse_descriptor;
@@ -297,7 +297,7 @@ private static final long serialVersionUID = 0L;
               MyResponse.class, Builder.class);
     }
 
-    // Construct using com.cdz.proto.MyResponse.newBuilder()
+    // Construct using com.cdz.netty.proto.MyResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }

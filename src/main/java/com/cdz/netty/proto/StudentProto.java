@@ -24,6 +24,26 @@ public final class StudentProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_cdz_proto_MyResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_cdz_proto_StudentRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_cdz_proto_StudentRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_cdz_proto_StudentResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_cdz_proto_StudentResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_cdz_proto_StudentRequestList_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_cdz_proto_StudentRequestList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_cdz_proto_StudentResponseList_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_cdz_proto_StudentResponseList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35,10 +55,23 @@ public final class StudentProto {
     String[] descriptorData = {
       "\n\014Person.proto\022\rcom.cdz.proto\"\035\n\tMyReque" +
       "st\022\020\n\010username\030\001 \001(\t\"\036\n\nMyResponse\022\020\n\010re" +
-      "alname\030\002 \001(\t2V\n\016StudentService\022D\n\013GetRea" +
-      "lName\022\030.com.cdz.proto.MyRequest\032\031.com.cd" +
-      "z.proto.MyResponse\"\000B\037\n\rcom.cdz.protoB\014S" +
-      "tudentProtoP\001b\006proto3"
+      "alname\030\002 \001(\t\"\035\n\016StudentRequest\022\013\n\003age\030\001 " +
+      "\001(\005\"=\n\017StudentResponse\022\014\n\004name\030\001 \001(\t\022\017\n\007" +
+      "address\030\002 \001(\t\022\013\n\003age\030\003 \001(\005\"D\n\022StudentReq" +
+      "uestList\022.\n\007ageList\030\001 \003(\0132\035.com.cdz.prot" +
+      "o.StudentRequest\"J\n\023StudentResponseList\022" +
+      "3\n\013studentList\030\001 \003(\0132\036.com.cdz.proto.Stu" +
+      "dentResponse2\352\002\n\016StudentService\022D\n\013GetRe" +
+      "alName\022\030.com.cdz.proto.MyRequest\032\031.com.c" +
+      "dz.proto.MyResponse\"\000\022X\n\023GetStudentListB" +
+      "yAge\022\035.com.cdz.proto.StudentRequest\032\036.co" +
+      "m.cdz.proto.StudentResponse\"\0000\001\022X\n\023GetSt" +
+      "udentByAgeList\022\035.com.cdz.proto.StudentRe" +
+      "quest\032\036.com.cdz.proto.StudentResponse\"\000(" +
+      "\001\022^\n\027GetStudentListByAgeList\022\035.com.cdz.p" +
+      "roto.StudentRequest\032\036.com.cdz.proto.Stud" +
+      "entResponse\"\000(\0010\001B%\n\023com.cdz.netty.proto" +
+      "B\014StudentProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56,6 +89,30 @@ public final class StudentProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_cdz_proto_MyResponse_descriptor,
         new String[] { "Realname", });
+    internal_static_com_cdz_proto_StudentRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_cdz_proto_StudentRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_cdz_proto_StudentRequest_descriptor,
+        new String[] { "Age", });
+    internal_static_com_cdz_proto_StudentResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_cdz_proto_StudentResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_cdz_proto_StudentResponse_descriptor,
+        new String[] { "Name", "Address", "Age", });
+    internal_static_com_cdz_proto_StudentRequestList_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_cdz_proto_StudentRequestList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_cdz_proto_StudentRequestList_descriptor,
+        new String[] { "AgeList", });
+    internal_static_com_cdz_proto_StudentResponseList_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_cdz_proto_StudentResponseList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_cdz_proto_StudentResponseList_descriptor,
+        new String[] { "StudentList", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

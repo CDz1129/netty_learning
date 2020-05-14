@@ -65,23 +65,4 @@ public class StudentServer {
         studentServer.blockUntilShutdown();
 
     }
-
-
-    static class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBase {
-
-        @Override
-        public void getRealName(MyRequest request, StreamObserver<MyResponse> responseObserver) {
-
-            MyResponse response;
-            if (request.getUsername().equals("CDz")) {
-                response = MyResponse.newBuilder().setRealname("陈德智").build();
-            } else {
-                response = MyResponse.newBuilder().setRealname("张三").build();
-            }
-
-            responseObserver.onNext(response);
-            responseObserver.onCompleted();
-//            super.getRealName(request, responseObserver);
-        }
-    }
 }
