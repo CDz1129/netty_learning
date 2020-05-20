@@ -3,6 +3,8 @@ package com.cdz.netty.proto.demo;
 import com.cdz.netty.proto.*;
 import io.grpc.stub.StreamObserver;
 
+import java.util.UUID;
+
 /**
  * Created with IntelliJ IDEA.
  * Description:
@@ -83,9 +85,10 @@ public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBas
         return new StreamObserver<StudentRequest>() {
             @Override
             public void onNext(StudentRequest value) {
+                System.out.println(value.getAge());
                 responseObserver.onNext(StudentResponse.newBuilder()
                         .setName("张三"+value.getAge())
-                        .setAddress("地址"+value.getAge())
+                        .setAddress("地址"+ UUID.randomUUID())
                         .setAge(value.getAge()).build());
             }
 

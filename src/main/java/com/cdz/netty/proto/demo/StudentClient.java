@@ -87,6 +87,33 @@ public class StudentClient {
         System.out.println("---------request and response stream-----------------------");
 
 
+        StreamObserver<StudentRequest> studentListByAgeList = asynStub.getStudentListByAgeList(new StreamObserver<StudentResponse>() {
+            @Override
+            public void onNext(StudentResponse value) {
+                System.out.println(value.getAddress());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                t.printStackTrace();
+            }
+
+
+            @Override
+            public void onCompleted() {
+
+                System.out.println("完成");
+            }
+        });
+
+        for (int i = 0; i < 100; i++) {
+            studentListByAgeList.onNext(StudentRequest.newBuilder().setAge((int) System.currentTimeMillis()/1000).build());
+
+        }
+
+
+        studentListByAgeList.onCompleted();
+
         try {
             TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
