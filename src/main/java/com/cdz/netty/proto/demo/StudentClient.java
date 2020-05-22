@@ -30,7 +30,6 @@ public class StudentClient {
 
         MyRequest myRequest = MyRequest.newBuilder().setUsername("cdz").build();
         MyResponse realName = blockingStub.getRealName(myRequest);
-
         System.out.println("-----------------simple --------------------");
         System.out.println("gRPC返回："+realName.getRealname());
         System.out.println("-----------------simple --------------------");
